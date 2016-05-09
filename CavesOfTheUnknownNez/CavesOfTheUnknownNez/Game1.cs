@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using CavesOfTheUnknownNez.Scenes;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Nez;
@@ -36,10 +37,14 @@ namespace CavesOfTheUnknownNez
 
 			Window.AllowUserResizing = true;
 
+			//add a new instance of schene and adda  defualt renderer it lookslike. 
+			//now what to put in GameScene see if can add entities in there. 
+			var gameScene = new GameScene();
+			gameScene.addRenderer(new DefaultRenderer(0,null));
 
-			var myScene = Scene.createWithDefaultRenderer(Color.Coral);
+			//var myScene = GameScene.createWithDefaultRenderer(Color.Coral);
 
-			scene = myScene;
+			scene = gameScene;
 		}
 
 		/// <summary>
